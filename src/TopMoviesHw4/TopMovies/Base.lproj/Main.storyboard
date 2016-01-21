@@ -36,35 +36,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="96W-9J-lVS">
-                                <rect key="frame" x="16" y="76" width="288" height="414"/>
+                                <rect key="frame" x="16" y="76" width="288" height="452"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL9-fB-xWU">
+                                        <rect key="frame" x="97" y="0.0" width="95" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                        <state key="normal" title="MoviePoster"/>
+                                        <connections>
+                                            <segue destination="ChT-pC-1GU" kind="show" id="4cl-vw-tVX"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SamplePoster" translatesAutoresizingMaskIntoConstraints="NO" id="34H-5Z-g7I">
-                                        <rect key="frame" x="54" y="0.0" width="180" height="267"/>
+                                        <rect key="frame" x="54" y="38" width="180" height="267"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="FdO-gG-LMe"/>
                                             <constraint firstAttribute="width" secondItem="34H-5Z-g7I" secondAttribute="height" multiplier="0.675:1" id="XFl-U6-PSw"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Die Hard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e22-dm-thQ">
-                                        <rect key="frame" x="111" y="275" width="66" height="20"/>
+                                        <rect key="frame" x="111" y="313" width="66" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Director" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfj-uh-Te8">
-                                        <rect key="frame" x="78" y="303" width="133" height="20"/>
+                                        <rect key="frame" x="78" y="341" width="133" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lenghty movie summary.This is a lenghty movie summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fr6-Mg-vtW">
-                                        <rect key="frame" x="0.0" y="331" width="288" height="41"/>
+                                        <rect key="frame" x="0.0" y="369" width="288" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fZ-cn-h83">
-                                        <rect key="frame" x="86" y="380" width="116" height="34"/>
+                                        <rect key="frame" x="86" y="418" width="116" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Change Movie"/>
                                         <connections>
@@ -93,6 +101,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9b-04-5wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="699" y="531"/>
+        </scene>
+        <!--Movie Poster Detail View Controller-->
+        <scene sceneID="YiF-DK-GZO">
+            <objects>
+                <viewController id="ChT-pC-1GU" customClass="MoviePosterDetailViewController" customModule="__" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aF6-LC-hnc"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1h-Sj-lNM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xH4-Ib-hNW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtw-Mu-koc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="moviePosterScrollView" destination="jtw-Mu-koc" id="n3p-v9-aej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8k-mS-bay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="530"/>
         </scene>
         <!--Movie List View Controller-->
         <scene sceneID="DfB-sm-s7X">
