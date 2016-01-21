@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MoviePosterDetailViewController: UIViewController {
-
+class MoviePosterDetailViewController: UIViewController,UIScrollViewDelegate {
+    var moviePosterURL:NSURL?
+    
     
     
     @IBOutlet weak var moviePosterScrollView: UIScrollView!
@@ -17,10 +18,28 @@ class MoviePosterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let imageView = UIImageView()
+        imageView.setImageWithURL(moviePosterURL!)
+        imageView.frame = view.frame
 
         // Do any additional setup after loading the view.
+        
+        self.moviePosterScrollView.addSubview(imageView)
+        
+        self.moviePosterScrollView.contentSize = view.frame.size
+        
+        self.moviePosterScrollView.maximumZoomScale = 3.0
+        
+        self.moviePosterScrollView.minimumZoomScale = 0.1
+        
+        self.moviePosterScrollView.delegate = self
     }
-
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return scrollView.subviews.first
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
